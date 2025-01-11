@@ -4,7 +4,9 @@ A high-performance Flask-based API designed to manage and evaluate GPU submissio
 
 ## 🏗️ Architecture
 
-![Architecture Diagram](architecture.svg)
+<div align="center">
+  <img src="architecture.svg" alt="Architecture Diagram" width="800"/>
+</div>
 
 The system consists of several key components:
 - **Flask Application**: Core backend service handling HTTP requests
