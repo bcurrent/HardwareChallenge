@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="#f8f9fa"/>
+    
+    <!-- Title -->
+    <text x="400" y="40" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold">
+        GPU Qualification Scoring API Architecture
+    </text>
+
+    <!-- Database -->
+    <rect x="50" y="400" width="160" height="80" rx="10" fill="#b8daff" stroke="#004085"/>
+    <text x="130" y="445" text-anchor="middle" font-family="Arial" font-size="14">PostgreSQL</text>
+    <text x="130" y="465" text-anchor="middle" font-family="Arial" font-size="12">Submissions &amp; Users</text>
+
+    <!-- Redis Cache -->
+    <rect x="590" y="400" width="160" height="80" rx="10" fill="#ffeeba" stroke="#856404"/>
+    <text x="670" y="445" text-anchor="middle" font-family="Arial" font-size="14">Redis Cache</text>
+    <text x="670" y="465" text-anchor="middle" font-family="Arial" font-size="12">Leaderboard &amp; Rate Limits</text>
+
+    <!-- Flask App -->
+    <rect x="300" y="200" width="200" height="120" rx="10" fill="#c3e6cb" stroke="#155724"/>
+    <text x="400" y="230" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Flask Application</text>
+    <text x="400" y="255" text-anchor="middle" font-family="Arial" font-size="12">Routes &amp; Controllers</text>
+    <text x="400" y="275" text-anchor="middle" font-family="Arial" font-size="12">Input Validation</text>
+    <text x="400" y="295" text-anchor="middle" font-family="Arial" font-size="12">Error Handling</text>
+
+    <!-- Core Services -->
+    <rect x="100" y="100" width="140" height="60" rx="10" fill="#d6d8db" stroke="#1b1e21"/>
+    <text x="170" y="135" text-anchor="middle" font-family="Arial" font-size="14">Scoring System</text>
+
+    <rect x="330" y="100" width="140" height="60" rx="10" fill="#d6d8db" stroke="#1b1e21"/>
+    <text x="400" y="135" text-anchor="middle" font-family="Arial" font-size="14">Rate Limiter</text>
+
+    <rect x="560" y="100" width="140" height="60" rx="10" fill="#d6d8db" stroke="#1b1e21"/>
+    <text x="630" y="135" text-anchor="middle" font-family="Arial" font-size="14">Slot Manager</text>
+
+    <!-- API Endpoints -->
+    <rect x="280" y="20" width="240" height="30" rx="5" fill="#f5c6cb" stroke="#721c24"/>
+    <text x="400" y="40" text-anchor="middle" font-family="Arial" font-size="14">REST API Endpoints</text>
+
+    <!-- Connections -->
+    <!-- API to Flask -->
+    <line x1="400" y1="50" x2="400" y2="200" stroke="#6c757d" stroke-width="2"/>
+    
+    <!-- Services to Flask -->
+    <line x1="170" y1="160" x2="300" y2="200" stroke="#6c757d" stroke-width="2"/>
+    <line x1="400" y1="160" x2="400" y2="200" stroke="#6c757d" stroke-width="2"/>
+    <line x1="630" y1="160" x2="500" y2="200" stroke="#6c757d" stroke-width="2"/>
+    
+    <!-- Flask to Database -->
+    <line x1="300" y1="320" x2="130" y2="400" stroke="#6c757d" stroke-width="2"/>
+    
+    <!-- Flask to Redis -->
+    <line x1="500" y1="320" x2="670" y2="400" stroke="#6c757d" stroke-width="2"/>
+
+    <!-- Legend -->
+    <rect x="50" y="520" width="700" height="60" rx="5" fill="white" stroke="#6c757d"/>
+    <text x="70" y="545" font-family="Arial" font-size="12" font-weight="bold">Components:</text>
+    <circle cx="180" cy="542" r="6" fill="#c3e6cb"/>
+    <text x="200" y="545" font-family="Arial" font-size="12">Core Application</text>
+    <circle cx="320" cy="542" r="6" fill="#b8daff"/>
+    <text x="340" y="545" font-family="Arial" font-size="12">Data Storage</text>
+    <circle cx="460" cy="542" r="6" fill="#ffeeba"/>
+    <text x="480" y="545" font-family="Arial" font-size="12">Caching Layer</text>
+    <circle cx="600" cy="542" r="6" fill="#d6d8db"/>
+    <text x="620" y="545" font-family="Arial" font-size="12">Services</text>
+
+    <text x="70" y="565" font-family="Arial" font-size="10">
+        Note: All components run within the same Replit environment, communicating via internal network
+    </text>
+</svg>
